@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Poppins';
+}
+section{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ /* background: black;*/
+  margin: 0;
+  background: linear-gradient(
+    whitesmoke,
+    papayawhip
+  );
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+section:before{
+  content: "";
+  width: 320px;
+  height: 300px;
+  background: linear-gradient(90deg, turquoise, paleturquoise);
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-150px, -100px);
+}
+section:after{
+  content: "";
+  position: absolute;
+  width: 320px;
+  height: 300px;
+  background: linear-gradient(90deg, paleturquoise, darkcyan);
+  border-radius: 50%;
+  transform: translate(130px, 150px);
+}
+.container{
+  width: 350px;
+  height: 220px;
+  position: relative;
+  cursor: pointer;
+  z-index: 100;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transition: .8s ease-in-out;
+}
+.container:hover{
+	transform: rotateY(180deg);
+	cursor: pointer;
+}
+.container .front{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, crimson, maroon); /*
+  you can change to an image through the image folder... url("image/Screenshot_20250410-213652.jpg")*/
+  z-index: 100;
+  border-radius: 25px 21px 25px 21px;
+  backdrop-filter: blur(30px);
+  box-shadow: 7px 7px 10px black;
+}
+.front header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+.front .logo h5{
+	font-size: 11px;
+	font-family: fantasy;
+	color: black;
+	margin-left: 10px;
+	margin-top: -10px;
+}
+.static-image img{
+	float: right;
+	transform: rotate(90deg);
+  width: 40px;
+  border-radius: 24px;
+  margin-right: 13px;
+}
+.front .snippet{
+	display: flex;
+}
+.front .snippet img{
+  width: 40px;
+  height: 30px;
+  border-radius: 6px;
+  margin-left: 30px;
+  margin-top: -1px;
+  margin-bottom: 14px;
+}
+.front .snippet i{
+	margin-left: 35px;
+	margin-top: -15px;
+	align-items: center;
+	justify-content: center;
+	font-size: 12px;
+	transform: rotate(270deg);
+	color: white;
+}
+.card-details .number h6{
+  text-align: center;
+  font-family: Verdana;
+  font-size: 13px;
+  margin-top: -4px;
+  letter-spacing: 7px;
+  color: papayawhip;
+}
+.card-details .expiry{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 11px;
+}
+.card-details h5{
+	font-size: 10px;
+	font-weight: 300;
+}
+.card-details .expiry h6{
+	color: whitesmoke;
+	font-size: 10px;
+}
+.card-details .account {
+	margin-top: 9px;
+	margin-left: 15px;
+	display: inline-block;
+}
+.card-details .account span{
+	font-size: 13px;
+	font-family: Times New Roman;
+	font-style: italic;
+	margin-left: 9px;
+}
+.card-details .account h5{
+	margin-left: 10px;
+	font-size: 13px;
+	color: papayawhip;
+	letter-spacing: 2px;
+	font-family: Courier New;
+}
+.card-details .card-image img{
+	width: 70px;
+	float: right;
+	display: flex;
+	margin-right: 20px;
+	margin-top: 27px;
+}
+.container .back{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right, maroon, crimson);
+  z-index: 100;
+  border-radius: 21px 25px 21px 25px;
+  backdrop-filter: blur(30px);
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  box-shadow: 5px 5px 10px  black;
+}
+.container .back h6{
+	font-size: 1px;
+	color: white;
+	text-align: center;
+	font-family: Sans-Serif;
+	padding: 10px;
+	font-style: italic;
+	font-weight: 300;
+}
+.back .magnetic-strip{
+	height: 50px;
+	width: 100%;
+	background-color: lightgray;
+	position: absolute;
+	top: 30px;
+}
+.back .magnetic-strip h6{
+	font-size: -10px;
+/*	display: flex;*/
+	margin-top: 42px;
+	text-align: left;
+	font-style: normal;
+	font-weight: 200;
+}
+.back .signature{
+	background: repeating-linear-gradient(#fff, papayawhip 2px, #efefef 0px, #efefef 5px);
+	height: 23px;
+	width: 55%;
+	margin-top: 65px;
+	margin-left: 10px;
+	border-radius: 2px;
+	text-align: right;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.back .signature i{
+	margin-right: -25px;
+	padding: 3px 4px;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	display: flex;
+	background: whitesmoke;
+	height: 17px;
+	font-size: 11px;
+	border-top-right-radius: 2px;
+	border-bottom-right-radius: 2px;
+}
+.close h6{
+	margin-top: 47px;
+	font-size: 5px;
+	display: flex;
+	font-weight: 100;
+	
+}
